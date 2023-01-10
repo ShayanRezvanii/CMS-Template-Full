@@ -1,0 +1,34 @@
+{
+  "hero": [{ "image": "", "titel": "", "subtite": "" }],
+
+  "about": {
+    "Tite": "",
+    "subtite": "",
+    "aboutImage": "",
+    "content": [{ "titel": "", "subtitel": "", "log": "" }]
+  },
+
+  "menu": {
+    "titel": "",
+    "subtitel": "",
+    "menu": [{ "titel": "", "resepi": "", "amount": "" }]
+  },
+
+  "blog": {
+    "titel": "",
+    "subtitel": "",
+    "weblog": [
+      { "titel": "", "subtitel": "", "contetn": "", "image": "", "date": "" }
+    ]
+  },
+  
+  "contact": {
+    "titel": "",
+    "address": "",
+    "phone": "",
+    "telegram": "",
+    "instagram": "",
+    "whatsapp": "",
+    "facebook": ""
+  }
+}
