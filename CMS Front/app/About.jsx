@@ -38,31 +38,85 @@ async function About() {
             {about[0] === undefined ? "بهترین نوع قهوه " : about[0].subtitle}
           </h1>
           <div className="w-full justify-start items-start flex flex-col space-y-16 my-6">
-            {bodyAbouts.map((item) => {
-              return (
+            {bodyAbouts.length === 0 ? (
+              <div className="w-full justify-start items-start flex flex-col space-y-16 my-6">
                 <div
-                  key={item._id}
-                  className="flex justify-center space-x-4 items-center "
+                  data-aos="fade-left"
+                  className="flex justify-center  items-center  relative  "
                 >
-                  <div className="w-56 h-28  ml-4 relative">
-                    <Image
-                      src={item.image}
-                      fill
-                      className="object-contain"
-                      alt={item.title}
-                    />
-                  </div>
-                  <div>
-                    <h2 className="text-4xl font-IransansBold text-neutral-800 mb-3">
-                      {item.title}
+                  <GiPaperBagFolded size={150} className=" text-amber-700 " />
+                  <div className="lines">
+                    <h2 className="text-4xl font-IransansBold text-amber-700 mb-3">
+                      بسته بندی
                     </h2>
-                    <p className="font-IransansThin text-neutral-800 w-full lg:max-w-[80%]">
-                      {item.subtitle}
+                    <p className="font-IransansThin text-neutral-800 w-full  lg:max-w-[80%]">
+                      لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+                      و با چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                      سطرآنچنان که لازم است استفاده از طراحان گرافیک است.
                     </p>
                   </div>
                 </div>
-              );
-            })}
+
+                <div
+                  data-aos="fade-left"
+                  className="flex justify-center  items-center relative "
+                >
+                  <FaRecycle size={120} className=" text-amber-700 ml-3" />
+                  <div className="lines">
+                    <h2 className="text-4xl font-IransansBold text-amber-700 mb-3">
+                      بازیافت
+                    </h2>
+                    <p className="font-IransansThin text-neutral-800 w-full  lg:max-w-[80%]">
+                      لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+                      و با چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                      سطرآنچنان که لازم است استفاده از طراحان گرافیک است.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  data-aos="fade-left"
+                  className="flex justify-center  items-center "
+                >
+                  <CiCoffeeBean size={120} className="text-amber-700 ml-3" />
+                  <div>
+                    <h2 className="text-4xl font-IransansBold text-amber-700 mb-3">
+                      رست تازه
+                    </h2>
+                    <p className="font-IransansThin text-neutral-800 w-full  lg:max-w-[80%]">
+                      لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ
+                      و با چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                      سطرآنچنان که لازم است استفاده از طراحان گرافیک است.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              bodyAbouts.map((item) => {
+                return (
+                  <div
+                    key={item._id}
+                    className="flex justify-center space-x-4 items-center "
+                  >
+                    <div className="w-56 h-28  ml-4 relative">
+                      <Image
+                        src={item.image}
+                        fill
+                        className="object-contain"
+                        alt={item.title}
+                      />
+                    </div>
+                    <div>
+                      <h2 className="text-4xl font-IransansBold text-neutral-800 mb-3">
+                        {item.title}
+                      </h2>
+                      <p className="font-IransansThin text-neutral-800 w-full lg:max-w-[80%]">
+                        {item.subtitle}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })
+            )}
           </div>
         </div>
         <div className="relative  w-full h-full  bg-center order-1 lg:order-2">

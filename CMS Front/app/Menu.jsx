@@ -60,15 +60,18 @@ async function Menu() {
           </button>
         </div>
         <div className="relative w-full h-full order-1">
-          <Image
-            src={`${menuList[0].image}`}
-            width={500}
-            height={500}
-            // fill
-            // className="object-cover"
-            alt="Menu Bg"
-          />
-          {/* <Image src={Menubg} className="object-cover" alt="Menu Bg" /> */}
+          {menuList[0] === undefined ? (
+            <Image src={Menubg} className="object-cover" alt="Menu Bg" />
+          ) : (
+            <Image
+              src={`${menuList[0].image}`}
+              width={500}
+              height={500}
+              fill
+              className="object-cover"
+              alt="Menu Bg"
+            />
+          )}
         </div>
       </div>
     </div>
